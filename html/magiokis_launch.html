@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="/magiokis.css" type="text/css"/>
+<base href="/cgi-bin/" />
+<title>Startscherm</title>
+</head>
+<body>
+<h1>Magiokis!</h1>
+<hr />
+<form action="magiokis_begin.py" method="post">
+<br />
+<div>
+  <span>1. Kies een database:</span>
+</div>
+<br />
+<div>
+  <span class="wi15px">&nbsp;</span>
+  <span><input type="radio" name="rbsel" value="songs" checked="checked"/>&nbsp;Songs</span>
+</div>
+<div>
+  <span class="wi15px">&nbsp;</span>
+  <span><input type="radio" name="rbsel" value="denk" />&nbsp;Denksels</span>
+</div>
+<div>
+  <span class="wi15px">&nbsp;</span>
+  <span><input type="radio" name="rbsel" value="vertel" />&nbsp;Verhalen</span>
+</div>
+<div>
+  <span class="wi15px">&nbsp;</span>
+  <span><input type="radio" name="rbsel" value="dicht" />&nbsp;Gedichten</span>
+</div>
+<br />
+<div>
+  <span>2. Meld u aan:<br /></span>
+</div>
+<br />
+<div>
+  <span class="wi18px">&nbsp;</span>
+  <span class="wi128px"><label for="userid">Gebruikersnaam:</label></span>
+  <span><input type="text" name="userid" size="20" maxlength="20" value="woefdram" readonly="readonly" id="userid"/></span>
+</div>
+<br/>
+<div>
+  <span class="wi18px">&nbsp;</span>
+  <span class="wi128px"><label for="passwd">Wachtwoord:</label></span>
+  <span><input type="password" name="passwd" size="20" maxlength="20" value="magiokis" readonly="readonly" id="passwd"/></span>
+</div>
+<br/>
+<div>
+  <span id="meld">&nbsp;</span>
+</div>
+<br/>
+<div>
+  <span>3. <input type="submit" value="  Login  "/></span>
+</div>
+<br />
+<br />
+<br />
+<br />
+</form>
+<span align="left">
+  <a href="http://www.anybrowser.org/campaign/">
+    <img src="http://www.pythoneer.nl/images/pany.gif" border="0" width="120" height="40" align="middle" alt="Viewable With Any Browser"/>
+  </a>
+</span>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+<title>%s tabel</title>
+<script type="" type="text/javascript">
+// functie om de bijbehorende submit- en cancel-knop te enablen
+function enable(x) {
+    document.getElementById("pbSub"+x).disabled = false ;
+    document.getElementById("pbCan"+x).disabled = false ;
+}
+</script>
+</head>
+<body>
+  <h1>Magiokis! Songs</h1>
+ <hr />
+  <a class="back" href="/">Terug naar hoofdmenu</a>
+  <p>&nbsp;</p>
+  <p><h3>Tabellenbeheer: %s</h3></p>
+  <div><span id="col1" class="wi10pct">Code</span><span class="%s">Waarde</span>
+  <span id="col3" class="wi10pct">%s</span>
+  <span id="col4" class="%s">&nbsp;</span></div>
+  <div><form action="%swijzigtabel.py" method="post">
+    <span class="wi10pct"><input type="text" name="txtCode" disabled="disabled" size="10" maxlength="10" value="%s"/></span>
+    <span class="%s"><input type="text" name="txtNaam" size="%s" maxlength="80" value="%s" onchange="enable('%s)"/></span>
+    <span class="wi10pct"><input type="text" name="txtPad" size="10" maxlength="10" value="%s" onchange="enable('%s')"/></span>
+    <span class="wi10pct"><input type="text" name="txtHTMLPad" size="10" maxlength="10" value="%s" onchange="enable('%s')"/></span>
+    <span class="wi10pct"><input type="text" name="txtPlayer" size="10" maxlength="10" value="%s" onchange="enable('%s')"/></span>
+    <span class="wi10pct"><input type="text" name="txtEditor" size="10" maxlength="10" value="%s" onchange="enable('%s')"/></span>
+    <span class="%s"><input type="submit" id="pbSub%s" value="aanpassen" disabled="disabled"/><input name="hType" type="hidden" value="%s">
+    <input type="button" id="pbCan%s" value="terugzetten" disabled="disabled" onclick="form.reset()"/></span>
+  </form></div>
+</body></html>

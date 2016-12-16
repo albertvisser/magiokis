@@ -1,0 +1,39 @@
+.gedichten, .gedicht {
+ display: block;
+ background-color: gray;
+ }
+.gedicht {
+ margin-top: 5em;
+ }
+.titel {
+ font-family: "comic sans ms",verdana,arial,sans-serif;
+ font-size: 1.8em;
+ display: block;
+ text-align: left;
+ text-indent: 10;
+ color: blue;
+ margin-bottom: .7em;
+ margin-top: .7em;
+ }
+.couplet {
+ font-family: "comic sans ms",verdana,arial,sans-serif;
+ display: block;
+ color: navy;
+ text-align: left;
+ margin-bottom: .7em;
+ margin-top: .7em;
+ }
+.regel {
+ font-family: "comic sans ms",verdana,arial,sans-serif;
+ text-indent: 20;
+ display: block;
+ color: navy;
+ white-space: preserve ;
+ }
+.tekst {
+ margin-top: 3em;
+ font-family: "comic sans ms",verdana,arial,sans-serif;
+ margin-left: 1em;
+ margin-right:5em;
+ display: block;
+ }

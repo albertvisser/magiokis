@@ -1,0 +1,13 @@
+<html><head></head><body>
+<form id="frmlist" action="%svertel_detail.py" method="post">
+<br/>%seksten gevonden met "%s" in de titel%s<br/><br/>
+<select name="lbSelItem" size="20" onfocus="document.getElementById('pbToon').disabled=false">%s<option value="%s">%s</option>%s</select>
+<br /><br /><input type="hidden" name="hVan" value="%s"/>
+<input type="hidden" name="hUser" id="hUser" value="%s">
+<input type="submit" %s value=" Toon tekst " id="pbToon"/>
+</form>
+<form id="frmnw" action="%svertel_detail.py" method="post">
+<input type="hidden" name="hUser" id="hUserN" value="%s">
+<input type="submit" value=" Nieuwe tekst opvoeren "/>
+</form>
+</body></html>

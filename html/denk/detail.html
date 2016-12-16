@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Denk_detailscherm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+<script type="text/javascript">
+function move_item(from, to)
+{
+  var f;
+  var SI; /* selected Index */
+  if(from.options.length>0)
+  {
+    for(i=0;i<from.length;i++)
+    {
+      if(from.options[i].selected)
+      {
+        SI=from.selectedIndex;
+        f=from.options[SI].index;
+        to.options[to.length]=new Option(from.options[SI].text,from.options[SI].value);
+        from.options[f]=null;
+        i--; /* make the loop go through them all */
+      }
+    }
+  }
+}
+function herbepaal(o)
+{
+  var s = o.options[0].text;
+  for (i=1;i<o.length;i++)
+    s += ("$#$" + o.options[i].text)
+  document.getElementById("txtTrefw").value = s;
+}
+</script>
+</head>
+<body>
+<span class="h1">Magiokis! Denksels</span>&nbsp;&nbsp;&nbsp;
+<a href='/'><input type="button" value="Terug naar startscherm" /></a>
+<hr />
+
+<form action="%sdenk_detail.py" method="post">
+Titel: <input type="text" name="txtTitel" value="%s" size="80" maxlength="80"><br />
+<input type="hidden" name="hselItem" value="%s" size="90" maxlength="80"><br />
+<input type="hidden" name="txtTrefw" value="%s" size="90" maxlength="255">
+<textarea name="txtTekst" cols="90" rows="20">%s</textarea>
+<hr/><p>Opgeven trefwoorden bij deze tekst:</p>
+<span style="float: left; width: 30%">
+Kies een trefwoord <br />uit de onderstaande lijst<br />
+<select name="lbselList" multiple="multiple" size="5">$s<option value="%s">%s</option>$s</select>
+<br />en klik op<br />
+<input type="button" name="pbAdd" value="Trefwoord toevoegen ->" onclick="move_item(lbselList,lbselTrefw)"/>
+</span>
+<span style="float: left; width: 30%">
+Of kies een trefwoord<br /> uit deze lijst<br />
+<select name="lbselTrefw" multiple="multiple" size="5">$s<option value="%s">%s</option>$s</select>
+<br />en klik op<br />
+<input type="button" name="pbDel" value="Trefwoord weghalen <-" onclick="move_item(lbselTrefw,lbselList)">
+</span>
+<span style="float: left; width: 40%">&nbsp;<br/><br/><br/>
+</span>
+<p><input type="submit" value="Gedachte %s" onclick="herbepaal(lbselTrefw)"/></p>
+</form>
+</body></html>
+

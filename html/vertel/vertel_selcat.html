@@ -1,0 +1,19 @@
+<html><head></head><body>
+<form id="frmsel" action="%svertel_select.py" method="post">
+<br/>Kies een categorie:
+<select name="lbSelCat" size="1">%s<option%s value="%s">%s</option>%s</select>
+<input type="hidden" name="hUser" id="hUserS" value="%s">
+<input type="submit" value=" Selectie uitvoeren ">
+</form>
+<form id="frmlist" action="%svertel_detail.py" method="post">
+<br/>%seksten gevonden bij categorie %s%s<br/><br/>
+<select name="lbSelItem" size="20" onfocus="document.getElementById('pbToon').disabled=false">%s<option value="%s">%s</option>%s</select>
+<br /><br /><input type="hidden" name="hVan" value="%s">
+<input type="hidden" name="hUser" id="hUserC" value="%s">
+<input type="submit" %s value=" Toon tekst " id="pbToon"></form>
+<form id="frmnw" action="%svertel_detail.py" method="post">
+<input type="hidden" name="hNwInCat" id="hNwInCat" value ="%s"/>
+<input type="hidden" name="hUser" id="hUserNC" value="%s">
+<input type="submit" value=" Nieuwe tekst opvoeren bij deze categorie "/>
+</form>
+</body></html>

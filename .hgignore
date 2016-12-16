@@ -1,0 +1,21 @@
+# use glob syntax.
+syntax: glob
+
+*.bak
+*.bpl
+*~
+*pyc
+*log
+*txt
+*ini
+pylint*
+*archive.zip
+*tempfile*
+data/*.xml
+data/*.xspf
+data/*.m3u
+data/index.html
+data/magiokis.mdb
+html/images/*
+html/pl/*
+html/xspf_player*

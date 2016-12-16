@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Vertel_Start</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="http://original.magiokis.nl/magiokis.css" type="text/css">
+<base href="/cgi-bin/"/>
+</head>
+<body>
+  <span class="h1">Magiokis! Verhalen</span>
+ <hr />
+<form action="vertel_select.py" method="post">
+  <table border="0">
+    <tr><td>&nbsp;</td></tr>
+    <tr>
+      <td>1. Geef usernaam op:</td>
+      <td colspan="2"><input type="text" name="txtUser" id="txtUser" %s /></td>
+    </tr>
+    <tr><td colspan="3">&nbsp;</td></tr>
+    <tr>
+      <td>2. Kies iets om te doen:</td>
+      <td colspan="2"><input type="radio" name="rbsel" value="selCat" checked="checked"/> Toon alle teksten van een categorie</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="radio" name="rbsel" value="selZoek"/> Zoeken op (deel van) titel:</td>
+      <td><input type="text" name="txtZoek" size="40" maxlength="80"/></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td colspan="2"><input type="radio" name="rbsel" value="nweTekst"/> Nieuwe tekst maken<br/></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="radio" name="rbsel" value="nweCat"/> Nieuwe categorie opvoeren:</td>
+      <td><input type="text" name="txtNwTrefw" size="40" maxlength="40"/></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td colspan="2"><input type="radio" name="rbsel" value="chgRoot"/> Plek voor bestanden defini&euml;ren<br></td>
+    </tr>
+    <tr><td colspan="3">&nbsp;</td></tr>
+    <tr>
+      <td>3. klik op</td>
+      <td colspan="2"><input type="submit" id="pbSubmit" value="  Uitvoeren  "/></td>
+    </tr>
+  </table>
+  <input type="hidden" name="hDo" value="%s"/>
+  <br/><div class="meld">&nbsp;</div>
+   <input type="button" value="Terug naar startscherm" onclick="document.location='http://original.magiokis.nl/magiokis_launch.html'" />
+</form>
+</body></html>

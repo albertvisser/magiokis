@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Vertel_Select</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+</head>
+<body>
+<span class="h1">Magiokis! Verhalen van %s</span>
+<span class="spacer">&nbsp;</span>
+<br/><div class="meld">%s</div>
+<!-- backtotop -->
+<hr />
+<form name="frmWijzigVerhaal" action="%svertel_detail.py" method="post">
+<table border="0"><tr><td>verhaal titel: </td>
+<td><input type="text" name="hTitel" value="%s" size="60" maxlength="80"/>
+<input type="hidden" name="hUser" value="%s"/>
+<input type="hidden" name="hId" value="%s"/>
+<input type="hidden" name="hHs" value="%s"/>
+<input type="hidden" name="hselItem" value="%s"/></td>
+</tr><tr><td>categorie:</td>
+<td><select name="lbSelCat" size="1"><option value="">-- kies een categorie --</option>$s<option%s value="%s">%s</option>$s</select></td>
+</tr><tr><td colspan="2"><input type="submit" value="Verhaal%s"/></td>
+</tr></table></form>
+<form name="frmKiesAlinea" action="%svertel_detail.py" method="post">
+<input type="hidden" name="hUserH" value="%s"/>
+<input type="hidden" name="hselIdH" value="%s"/>
+hoofdstukken: <select name="selHoofdstuk">$s<option%s value="%s">%s</option>$s<option%s value="%snw">(nieuw hoofdstuk)</option>$s</select>
+<input type="submit" value="Toon hoofdstuk" /><br /></form>
+<hr>
+<form name="frmWijzigAlinea" action="%svertel_detail.py" method="post">
+<input type="hidden" name="hUserT" value="%s"/>
+<input type="hidden" name="hselIdT" value="%s"/>
+<input type="hidden" name="hselHs" value="%s"/>
+hoofdstuk titel: <input type="text" name="titel2" size="60" maxlength="80" value="%s"><br><br>
+<textarea name="txtHoofdstuk" cols="100" rows="25">%s</textarea>
+<br><br><input type="submit" value="Hoofdstuktitel of -tekst aanpassen"  /></form>
+</body></html>

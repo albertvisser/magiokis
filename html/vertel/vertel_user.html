@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Verteller</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+</head>
+<body>
+<span class="h1">Magiokis! Verhalen</span>
+<span class="spacer">&nbsp;</span>
+<!-- backtotop -->
+<hr />
+<form action="%svertel_user.py" method="post">
+  <table border="0">
+    <tr><td>&nbsp;</td></tr>
+    <tr>
+      <td>Gegevens van verteller:</td>
+      <td>%s<input type="hidden" id="hUser" name="hUser" value="%s"/></td>
+    </tr>
+    <tr>
+      <td>webadres van tekstpagina's:</td>
+      <td><input type="text" name="txtUrl" id="txtUrl" value="%s" size="40" maxlength="80"/> </td>
+    </tr>
+    <tr>
+      <td>locaal adres van tekstpagina's:</td>
+      <td><input type="text" name="txtPad" id="txtPad" value="%s" size="40" maxlength="80"/></td>
+    </tr>
+<!--
+    <tr>
+      <td>(ander) wachtwoord:</td>
+      <td><input type="password" name="txtWW1" id="txtWW1" size="8" maxlength="8"/></td>
+    </tr>
+    <tr>
+      <td>wachtwoord nog een keer::</td>
+      <td><input type="password" name="txtWW2" id="txtWW2" size="8" maxlength="8"/></td>
+    </tr>
+-->
+    <tr>
+      <td><input type="submit" value="Aanpassen"/><input type="button" value="reset invoer" onclick="form.reset()"/></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</form>
+<div class="meld">%s</div>
+<table border="0">
+  <tr><td colspan="3"><hr/></td></tr>
+  <tr><td colspan="3">&nbsp;&nbsp;Categorie&euml;n:<br/></td></tr>
+  <tr><form action="%svertel_user.py" method="post">
+      <td> %3i.  <input type="hidden" name="hUser" id="hUser%03i" value="%s"/></td>
+      <td><input type="text" name="txtCat" id="txtCat%03i" size="40" maxlength="40" value="%s"/></td>
+      <td><input type="submit" value="opvoeren/wijzigen"/><input type="button" value="reset invoer" onclick="form.reset()"/></td>
+    </form></tr>
+  <tr><td colspan="3"><hr/></td></tr>
+</table>
+<!-- backtotop -->
+</body></html>

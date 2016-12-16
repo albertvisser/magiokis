@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Dicht_Select: %s</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+</head>
+<body>
+<h1>Magiokis! Gedichten</h1>
+<hr />
+<form action="%sdicht_detail.py" method="post">
+<br/><span class="meld">%sedichten gevonden %s</span><br/><br/>
+<select name="lbSelItem" size="20" onfocus="document.getElementById('pbToon').disabled=false">
+<option value="%s">%s</option>
+</select>
+<br /><br />
+<input type="submit" id="pbToon" value=" Toon tekst " disabled="disabled">
+<input type="button" value="Nieuw gedicht opvoeren" onclick="document.location='%sdicht_detail.py%s'" />
+<input type="button" value="Terug naar selectiescherm" onclick="document.location='%sdicht_select.py?rbselZoek=%s'" />
+<a href='/'><input type="button" value="Terug naar startscherm" /></a>
+</form>
+</body></html>
+

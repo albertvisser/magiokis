@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>SongDetail</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+<script type="text/javascript">
+function deleteOption(object,index) {
+    object.options[index] = null;
+}
+function addOption(object,text,value) {
+    var defaultSelected = true;
+    var selected = true;
+    var optionName = new Option(text, value, defaultSelected, selected)
+    object.options[object.length] = optionName;
+}
+function copySelected(fr,to) {
+    var fromObject = document.getElementById(fr), toObject = document.getElementById(to);
+    for (var i=0, l=fromObject.options.length;i<l;i++) {
+        if (fromObject.options[i].selected)
+            addOption(toObject,fromObject.options[i].text,fromObject.options[i].value);
+    }
+    for (var i=fromObject.options.length-1;i>-1;i--) {
+        if (fromObject.options[i].selected)
+            deleteOption(fromObject,i);
+    }
+}
+function copyAll(fr,to) {
+    var fromObject = document.getElementById(fr), toObject = document.getElementById(to);
+    for (var i=0, l=fromObject.options.length;i<l;i++) {
+        addOption(toObject,fromObject.options[i].text,fromObject.options[i].value);
+    }
+    for (var i=fromObject.options.length-1;i>-1;i--) {
+        deleteOption(fromObject,i);
+    }
+}
+</script>
+</head>
+<body>
+  <h1><a name="begin">Magiokis!</a></h1>
+ <hr />
+  <a class="back" href="/">Terug naar hoofdmenu</a>
+  <a class="back" href="%ssongs_detail.py?song=%s">Terug naar overzicht</a>
+  <a class="back" href="%slijstsongs.py">Terug naar lijst</a>
+ <form action="%swijzigopname.py" method="post">
+ <table width="800" border="0"><tr><td>
+  <table width="100%">
+   <tr><td colspan="4"><a name="details">Details van opname:</a><input type="hidden" name="song" value="%s"/><input type="hidden"name="opname" value ="%s"/></td></tr>
+   <tr><td><label for="Plaats">Opgenomen te:</label></td><td colspan="3">
+   <select name="Plaats">$s<option%s value="%s">%s</option>$s</select>
+   </td></tr><tr><td><label for="Datum">Opgenomen op:</label></td><td colspan="3">
+   <select name="Datum">$s<option%s value="%s">%s</option>$s</select>
+   </td></tr><tr><td><label for="Bezet">Bezetting:</label></td><td colspan="3">
+   <select name="Bezet">$s<option%s value="0">(n.v.t.)</option>$s<option%s value="%s">%s</option>$s</select>
+   </td></tr><tr><td width="120"><label for="Inst">Instrumenten:</label></td><td width="320">
+   <select name="Inst" size=6>$s<option%s value="%s">%s</option>$s</select>
+   </td><td width="35">
+   <input type="button" name="AddOne" value=" eraf >" onClick="copySelected('Inst','InstList')"/>&nbsp;<br/><br/>
+   <input type="button" name="Remove" value="< erbij" onClick="copySelected('InstList','Inst')"/>&nbsp;</td>
+   <td width="325">
+   <select name="InstList" size=6>$s<option%s value="%s">%s</option>$s</select>
+   </td></tr>
+   <tr><td><label for="Url">Filenaam:</label></td><td colspan=3><input type="text" name="Url" size="60" maxlength="80" value = "%s"></td></tr>
+   <tr><td><label for="Opm">Opmerkingen :</label></td><td colspan=3><input type = "text" name="Opm" size="80" maxlength="80" value = "%s"></td></tr>
+  </table>
+  <input type="hidden" name="instcodes" value ="%s">
+  <input type="submit" name="update" value = "Wijzigen"></td></tr>
+ </table>
+ </form>
+ <h4>%s</h4>
+</body></html>

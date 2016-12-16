@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Dicht_detailscherm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+</head>
+<body>
+<h1>Magiokis! Gedichten</h1>
+<hr />
+<a href='/'><input type="button" value="Terug naar startscherm" /></a>
+<form name="mainForm" action="%sdicht_detail.py" method="post">
+Jaar: <select name="hSelJaar">serie:$s<option %s value="%s">%s</option>$s</select><br />
+Titel: <input type="text" name="txtTitel" value="%s" size="80" maxlength="80"><br />
+<input type="hidden" name="hselItem" value="%s" size="90" maxlength="80"><br />
+<br />Commentaar: <br />
+<textarea name="txtTekst" cols="90" rows="2">%s</textarea>
+<br /><br />Tekst: <br />
+<textarea name="txtGedicht" cols="90" rows="20">%s</textarea>
+<p><input type="submit" value="Gedicht %s"</p>
+</form>
+</body></html>

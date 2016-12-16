@@ -1,0 +1,38 @@
+.vertel {
+ display: block;
+ background-color: gray;
+ margin-bottom: 2em;
+ }
+.titel {
+ font-family: "comic sans ms",verdana,arial,sans-serif;
+ font-size: 1.8em;
+ display: block;
+ text-align: center;
+ color: blue;
+ margin-bottom: .7em;
+ margin-top: .7em;
+ }
+.hoofdstuk {
+ display: block;
+ color: navy;
+ margin-bottom: 2em;
+ margin-top: 2em;
+ }
+.titel2, .htitel {
+ font-family: "comic sans ms",verdana,arial,sans-serif;
+ font-size: 1.4em;
+ display: block;
+ text-align: center;
+ color: navy;
+ margin-bottom: .7em;
+ margin-top: .7em;
+ }
+.alinea {
+ font-family: "comic sans ms",verdana,arial,sans-serif;
+ text-indent: 10;
+ display: block;
+ color: navy;
+ margin-top: .5em;
+ margin-left: 5%;
+ margin-right: 5%;
+ }

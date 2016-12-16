@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>SongDetail</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+</head>
+<body>
+ <h1><a name="begin">Magiokis!</a></h1>
+ <hr />
+ <a class="back" href="/">Terug naar hoofdmenu</a>
+ <a class="back" href="%ssongs_detail.py?song=%s">Terug naar overzicht</a>
+ <a class="back" href="%slijstsongs.py">Terug naar lijst</a>
+ <form action="%swijzigdetails.py" method="post">
+ <table width="800px" border="0"><tr><td>
+  <table width="100%">
+   <tr><td colspan=2><a name="details">Details van song:</a><input type="hidden"name="song" value ="%s"></td></tr>
+   <tr><td><label for="Titel">Titel:</label></td><td><input type="text" name="Titel" size="60" maxlength="80" value="%s"></td></tr>
+   <tr><td width="15%"><label for="Tekst">Tekst van:</label></td><td width="85%"><select name="Tekst">
+    <option %svalue="%s">%s</option>
+   </select></td></tr>
+   <tr><td><label for="Muziek">Muziek van:</label></td><td><select name="Muziek">
+    <option %svalue="%s">%s</option>
+   </select></td></tr>
+   <tr><td><label for="Datering">Datering:</label></td><td><input type="text" name="Datering" size="60" maxlength="40" value="%s"></td></tr>
+   <tr><td><label for="Opmerkingen">Opmerkingen :</label></td><td colspan=3><textarea name="Opmerkingen" cols="80" rows="3">%s</textarea></td></tr>
+  </table>
+  <input type="submit" name="update" value = "Wijzigen"></td></tr>
+ </table>
+ </form>
+ <h4>%s</h4>
+</body></html>

@@ -1,0 +1,34 @@
+.songtekst {
+ font-family: 'comic sans ms',verdana,arial,sans-serif;
+ display: block;
+ background-color:gray;
+ }
+.titel {
+ display: block;
+ font-size: large;
+ font-weight: bold;
+ margin-top: 2em;
+ margin-bottom: 1em;
+ margin-left: 2em;
+ color: blue;
+ text-transform: uppercase
+ }
+.couplet {
+ display: block;
+ margin-top: .5em;
+ margin-left: 4em;
+ }
+.refrein {
+ display: block;
+ margin-top: .5em;
+ margin-left: 8em;
+ }
+.regel {
+ display: block;
+ color: navy;
+ }
+.sign {
+ display: block;
+ text-align: right;
+ color: blue;
+ }

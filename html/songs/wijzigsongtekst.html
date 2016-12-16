@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>SongDetail</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+</head>
+<body>
+  <h1><a name="begin">Magiokis!</a></h1>
+ <hr />
+  <a class="back" href="%ssongs_detail.py?song=%s">Terug naar overzicht</a>
+  <a class="back" href="%slijstsongs.py">Terug naar lijst</a>
+  <a class="back" href="/">Terug naar hoofdmenu</a>
+<form action="%swijzigsongtekst.py" method="post">
+<table width="800px" border="0">
+  <tr>
+    <td>
+      <table width="100%">
+        <tr><td>Titel:</td><td><input type="text" name="titel" size="60" value ="%s"><tr>
+        <tr>
+          <td width="15%">Tekst:</td>
+          <td width="85%"><textarea name="tekst" cols="80" rows="24">%s</textarea><td>
+        </tr>
+        <tr>
+          <td><label for="fnaam">Filenaam:</label> <small><small>(indien afwijkend van titel)</small></small>
+            <input type="hidden" name="song" value="%s"></td>
+            <input type="hidden" name="fnaam" value="%s"></td>
+          <td><input type="text" name="filenm" size="60" maxlength="40" value="%s"></td>
+        </tr>
+      </table>
+      <input type="submit" name="update" value="Wijzigen">
+    </td>
+  </tr>
+</table>
+<h4>%s<h4>
+</form>
+</body></html>

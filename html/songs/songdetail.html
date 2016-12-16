@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>SongDetail</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="%smagiokis.css" type="text/css">
+</head>
+<body>
+ <h1><a name="begin">Magiokis!</a></h1>
+ <span class="button"><a href="#details">Details</a></span>
+ <span class="butt%s">%sOpnames%s</span>
+ <span class="butt%s">%sMuziekregistraties%s</span>
+ <span class="butt%s">%sTekst%s</a></span>
+ <span class="button"><a href="%slijstsongs.py">Terug naar lijst</a></span>
+ <span class="button"><a href="/">Terug naar hoofdmenu</a></span>
+ <hr />
+ <table width="100%" valign="top">
+  <tr><td colspan=2><a name="details"><span class="backo">Details van song:</span></a></td></tr>
+  <tr><td width="15%%">Titel:</td><td width="85%%">%s</td></tr>
+  <tr><td>Tekst van:</td><td>%s</td></tr>
+  <tr><td>Muziek van:</td><td>%s</td></tr>
+  <tr><td>Datering:</td><td>%s</td></tr>
+  <tr><td>Opmerkingen:</td><td>%s</td></tr>
+ </table><br />
+<span class="button"><a href="%swijzigdetails.py?song=%s">Wijzig details</a></span> <span class="button"><a href="#begin">Terug naar top</a></span>
+  <!-- <span class="buttno">Nieuwe song</span> -->
+ <hr />
+<!-- opnames -->
+ <p /><a name="opnames"><span class="backo">%s</span></a>$$ <table width="100%" border="0" valign="top"><tr><td width="48%">Plaats/datum:  </td><td width="52%">Instrumentarium/Bezetting/Commentaar:</td></tr>$$<tr><td><a href="%s">%s</a></td><td>%s<br/>%s</td></tr>$$ </table>
+ <br /><span class="button">Nieuwe opname</span><span class="button"><a href="#begin">Terug naar top</a></span>
+<!-- endopnames -->
+ <hr />
+<!-- registraties -->
+ <p /><a name="muziek"><span class="backo">%s</span></a>$$ <table width="100%" border="0" valign="top"><tr><td width="30%">Soort registratie:</td><td width="70%">Commentaar:</td></tr>$$<tr><td><a href="%s" target="_blank">%s</a></td><td>%s</td></tr>$$ </table>
+ <br /> <span class="button">Nieuwe registratie</span><span class="button"><a href="#begin">Terug naar top</a></span>
+<!-- endregistraties -->
+<hr />
+<!-- tekst -->
+ <p /><a name="tekst"><span class="backo">%s</span></a>
+ <table id="teksttab" width="100%" border="0"><tr><td>
+ </td></tr></table><br /><span class="button"><a href="#begin">Terug naar top</a></span>
+ <span class="button">%sSongtekst %s</span>
+<!-- endtekst -->
+</body></html>
