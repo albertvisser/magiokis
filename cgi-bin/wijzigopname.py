@@ -24,7 +24,6 @@ def main():
         args["opnid"] = test
     elif fout == "ok":
         fout = "geenopname"
-    test =
     updateform = True if "update" in form else False
     args["edit"] = updateform
     if updateform:

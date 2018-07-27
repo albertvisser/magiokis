@@ -29,10 +29,10 @@ def main():
     ok = "ok"
     pic = form.getfirst("picture", '')
     if not pic:
-        ok = "nopic"
+        ok = "No picture provided"
     pad = form.getfirst("pad", '')
     if not pad and ok == 'ok':
-        ok = "nopath"
+        ok = "No path provided"
     volgnr = int(form.getfirst("seq", '0'))
     if not volgnr:
         volgnr = 1

@@ -118,18 +118,9 @@ class Songs:
             self.regels.append("onbekende actie (wat) opgegeven: '%s'" % wat)
 
     def start(self):
-        self.regels.append('<p>{}</p>'.format(os.path.join(htmlpad, "start.html")))
         with open(os.path.join(htmlpad, "start.html")) as f_in:
             for x in f_in:
-                x = x.rstrip()
-                if '<link rel="stylesheet"' in x:
-                    self.regels.append(x % httproot)
-                elif 'Terug naar startscherm' in x:
-                    self.regels.append(x % httproot)
-                elif 'href="%s' in x:
-                    self.regels.append(x % http_cgipad)
-                else:
-                    self.regels.append(x)
+                self.regels.append(x.rstrip())
 
     def lijstopnames(self):
         try:
@@ -762,10 +753,9 @@ class Songs:
         songtekstregels = []
         ds = Songtekst(self.songid)
         ds.read()
-        if ds.found:
-            songtitel = ds.titel
-            filenaam = ds.file
-            songtekstregels = ds.regels
+        songtitel = ds.titel if ds.found else ''
+        filenaam = ds.file if ds.found else ''
+        songtekstregels = ds.regels if ds.found else ''
         #~ print ds.__dict__
         with open(os.path.join(htmlpad, "wijzigsongtekst.html")) as template:
             for x in template:
@@ -837,7 +827,7 @@ class Songs:
         except DataError as meld:
             self.fout, = meld
         else:
-            plaatskeys = lh.lijst.keys()
+            plaatskeys = list(lh.lijst.keys())
             plaatskeys.sort()
             plaatsitems = lh.lijst
         try:
@@ -845,7 +835,7 @@ class Songs:
         except DataError as meld:
             self.fout, = meld
         else:
-            datumkeys = lh.lijst.keys()
+            datumkeys = list(lh.lijst.keys())
             datumkeys.sort()
             datumitems = lh.lijst
         try:
@@ -853,7 +843,7 @@ class Songs:
         except DataError as meld:
             self.fout, = meld
         else:
-            bezetkeys = lh.lijst.keys()
+            bezetkeys = list(lh.lijst.keys())
             bezetkeys.sort()
             bezetitems = lh.lijst
         try:
@@ -861,7 +851,7 @@ class Songs:
         except DataError as meld:
             self.fout, = meld
         else:
-            instkeys = lh.lijst.keys()
+            instkeys = list(lh.lijst.keys())
             instkeys.sort()
             institems = lh.lijst
     #   lees de gegevens van de opgegeven opname

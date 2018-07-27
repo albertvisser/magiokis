@@ -25,7 +25,7 @@ def main():
         return
     ## docnaam = docnaam.replace("%20"," ")
     gotstyle = False
-    with open(os.path.join(dirnaam,docnaam)) as f_in,
+    with open(os.path.join(dirnaam, docnaam)) as f_in, \
             open(os.path.join(htmlroot, "tempfile.xml"), "w") as f:
         for x in f_in:
             if "?xml"in x:

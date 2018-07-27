@@ -11,7 +11,6 @@ from songs_main import Songs
 def main():
     print("Content-Type: text/html")     # HTML is following
     print('')
-    print('<p>{}</p>'.format(sys.path))
     d = Songs({"wat": "start"})
     for x in d.regels:
         print(x)

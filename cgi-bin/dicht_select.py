@@ -17,7 +17,8 @@ def main():
 
     action = ""
     args = {
-        "wat": "select"
+        "wat": "select",
+        "selItem": None
         }
     test = form.getfirst("rbselZoek", '')
     if test:
