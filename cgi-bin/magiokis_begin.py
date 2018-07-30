@@ -53,7 +53,7 @@ def main():
                         y = y.replace('id="userid"',('value="%s" id="userid"' % user))
                 elif 'id="meld"' in y:
                     y = y.replace('&nbsp;',ok)
-            print(y)
+                print(y)
 
 if __name__ == '__main__':
 	main()
