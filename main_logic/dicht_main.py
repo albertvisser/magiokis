@@ -108,14 +108,7 @@ class Dicht:
     def start(self):
         with open(os.path.join(htmlroot, "start.html")) as f_in:
             for x in f_in:
-                if 'link rel="stylesheet"' in x:
-                    self.regels.append(x[:-1] % httproot)
-                elif 'form action' in x:
-                    self.regels.append(x[:-1] % http_cgipad)
-                elif 'Terug' in x:
-                    self.regels.append(x[:-1] % httproot)
-                else:
-                    self.regels.append(x[:-1])
+                self.regels.append(x.rstrip())
 
     def nieuw_trefw(self):
         for x in trefwoordenlijst()[0]:

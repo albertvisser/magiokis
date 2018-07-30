@@ -106,15 +106,7 @@ class Denk:
     def start(self):
         with open(os.path.join(htmlroot, "start.html")) as template:
             for x in template:
-                x = x.rstrip()
-                if 'link rel="stylesheet"' in x:
-                    self.regels.append(x % httproot)
-                elif 'form action' in x:
-                    self.regels.append(x % http_cgipad)
-                elif 'Terug' in x:
-                    self.regels.append(x % httproot)
-                else:
-                    self.regels.append(x)
+                self.regels.append(x.rstrip())
 
     def nieuw_trefw(self):
         if self.sel_data in trefwoordenlijst()[0]:
