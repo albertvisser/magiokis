@@ -9,7 +9,7 @@ from verhalen import hoofdstuklijst, Hoofdstuk, Verhaal
 
 htmlroot = shared.htmlroot + "/vertel/"
 httproot = shared.httproot
-http_cgipad = shared.http_cgipad.replace('local', 'vertel')
+http_cgipad = shared.http_cgipad.replace('original', 'vertel')
 fouttekst = """\
 Argumenten fout, mogelijke oorzaak:<br/><br/>
 usernaam {} bestaat niet of is niet ingevuld<br/><br/>

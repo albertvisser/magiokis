@@ -17,7 +17,7 @@ songsroot = "http://songs.magiokis.nl/"
 songspad = shared.xmlpad + "songs/" # geen filepad maar webadres
 htmlpad = os.path.join(shared.htmlroot, "songs")
 httproot = shared.httproot
-http_cgipad = shared.http_cgipad.replace('local', 'songs')
+http_cgipad = shared.http_cgipad.replace('original', 'songs')
 HTML = "<html><head></head><body>{}</body></html>"
 
 class Songs:

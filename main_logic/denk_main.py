@@ -7,7 +7,7 @@ from denk_item import denk_lijst, denk_laatste, DenkItem
 
 htmlroot = os.path.join(shared.htmlroot, "denk")
 httproot = shared.httproot
-http_cgipad = shared.http_cgipad.replace('local', 'denk')
+http_cgipad = shared.http_cgipad.replace('original', 'denk')
 input_text = '<input type="{}" name="{}" value="{}"{}>'
 size_text =  'size="{}" maxlength="{}"'
 select_text = '<select name="{}" size="{}">$s<option value="%s">%s</option>$s</select>'

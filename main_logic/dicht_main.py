@@ -8,7 +8,7 @@ from dicht_item import DichtLijst, DichtItem
 
 htmlroot = os.path.join(shared.htmlroot, "dicht")
 httproot = shared.httproot
-http_cgipad = shared.http_cgipad.replace('local', 'dicht')
+http_cgipad = shared.http_cgipad.replace('original', 'dicht')
 
 class Dicht:
     def __init__(self,args):
